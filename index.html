@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center px-4">
+    <div class="max-w-2xl w-full bg-white p-6 rounded-2xl shadow-xl text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Para Mi Reina💜 </h1>
+        <p class="text-xl font-semibold text-pink-600 mb-6">Eres lo mejor que me ha pasado en la vida, te amo con todo mi corazón.</p>
+        <p class="text-gray-600 mb-6">Elige una carta para leer:</p>
+        <div class="space-y-4">
+            <button onclick="showText('texto1')" class="w-full bg-pink-500 text-white py-2 rounded-lg shadow-md hover:bg-pink-600">Carta 1</button>
+            <button onclick="showText('texto2')" class="w-full bg-pink-500 text-white py-2 rounded-lg shadow-md hover:bg-pink-600">Carta 2</button>
+            <button onclick="showText('texto3')" class="w-full bg-pink-500 text-white py-2 rounded-lg shadow-md hover:bg-pink-600">Carta 3</button>
+            <button onclick="showText('texto4')" class="w-full bg-pink-500 text-white py-2 rounded-lg shadow-md hover:bg-pink-600">Carta 4</button>
+        </div>
+        <div id="textDisplay" class="mt-6 p-4 bg-gray-50 rounded-lg shadow-md hidden">
+            <p id="textContent" class="text-gray-700"></p>
+            <button onclick="hideText()" class="mt-4 bg-gray-400 text-white py-2 px-4 rounded-lg shadow-md hover:bg-gray-500">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        const texts = {
+            texto1: "Yo por tu amor hago todo siempre y cuando tú estés dispuesta, porque la manera en la que tú amas para mí es inigualable, yo quiero que vuelva la Dayslevis que disfrutaba dormir conmigo, abrazarme y darme besos, que me miraba y sentía que yo era su mundo, quiero que vuelva la niña que me hizo ver el amor de una forma diferente y única, no te niego que aguantarme a mi es algo complejo pero yo siempre voy a mejorar para ti, yo siempre te voy a amar a ti aunque no te lo diga, yo siempre voy a pensar en ti aunque no lo creas, y tú siempre serás el amor de mi vida aunque no lo quieras. Para resumirte todo tú eres mi mundo, mi corazón te pertenece a ti, mi felicidad es por ti, mis ganas de crecer como persona y como pareja es por ti, en mis sueños estás tú, en mis planes estás tú, mi vida eres tú 💜💜 no tengo ojos para nadie más que no seas tú, y eso es porque tú me has amado de una forma tan sincera y pura que yo eso te lo quiero devolver toda mi vida.",
+
+            texto2: "Y nunca voy a dejar ir a la persona que tanto amo y con la que tanto soñé tener, porque si hay problemas los vamos a resolver, si hay qué cambiar lo vamos a hacer, si hay que aprender lo vamos a hacer, si hay que luchar lo vamos a hacer, pero todo si tú también estás dispuesta conmigo.",
+            
+            texto3: "Y es que tú y yo sabemos todo lo que hemos hecho para estar juntos, todo lo que hemos logrado y todo lo que hemos aprendido, no quiero perderte y no quiero soltar tu mano, eres muy importante para mí y quiero que sigas siendo mi complemento por mucho tiempo y si es posible y Dios lo permite por siempre. Y esto no lo digo solo por capricho y ya porque tú me conoces y sabes que si no me importaras hace rato ya me habría alejado de tu vida, pero yo quiero estar junto a ti, quiero ser feliz y hacerte feliz, quiero todo pero a tu lado😪❤‍🩹 en mi vida nunca había deseado tanto que alguien se quede conmigo y eso lo hago porque de verdad quiero que seas tú la persona que me haga sentir que de verdad el amor es más grande que cualquier otra cosa.",
+            
+            texto4: "Te amo mucho mi niña hermosa y espero que con esto entiendas por qué sigo estando aquí y por qué sigo confiando en ti y en nosotros😣💔",
+
+
+        };
+
+        function showText(key) {
+            document.getElementById('textContent').innerText = texts[key];
+            document.getElementById('textDisplay').classList.remove('hidden');
+        }
+
+        function hideText() {
+            document.getElementById('textDisplay').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
