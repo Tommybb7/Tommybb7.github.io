@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f06292, #9c27b0); /* Degradado rosa a morado */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-center relative px-4">
+    <div class="z-10 w-full max-w-md">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6 sm:mb-10">¿MARTES DE TARDE EN LA CASA?</h1>
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center">
+            <button onclick="mostrarMensaje('Te amo mi amor, te espero mañana')" class="px-6 py-3 bg-white text-black text-lg font-bold rounded-lg shadow-lg w-full sm:w-auto">SI</button>
+            <button onclick="mostrarMensaje('No me importa igual te espero mañana :)')" class="px-6 py-3 bg-black text-white text-lg font-bold rounded-lg shadow-lg w-full sm:w-auto">NO</button>
+        </div>
+        <p id="mensaje" class="text-xl sm:text-2xl font-semibold text-gray-800 mt-5"></p>
+    </div>
+    <script>
+        function mostrarMensaje(texto) {
+            document.getElementById('mensaje').innerText = texto;
+        }
+    </script>
+</body>
+</html>
